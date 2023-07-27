@@ -1,0 +1,23 @@
+---
+- name: For testing rôle
+  hosts: vm_test
+  become: yes
+  roles:
+    - role: users_alt
+      #Les groupes
+      users_group_list:
+        - name: web
+        - name: luri
+        - name: test
+      #Les utilisateurs
+      users_user_list:
+        - name: luri
+          password: $y$j9T$PbWdRwigql9bVuxoNjL8t/$cgLhiGIVF2fTtmZSqE5zKn7TTaMcywzLHO79gUKqLN5
+          group: luri
+          groups: web,test
+          sudo_options: "ALL=(ALL) ALL"
+          authorized_keys:
+            - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSWQZoKTFLI47YNOJWCVRa+gUCJjgfy7uC0A+RkbQy4 luri@eelo.me"
+        - name: test
+          password: $y$j9T$BFRXWLFDZbUk22pBx9gNS1$HMlLfP8rbbUV4B2tfVkLxcpp/PbcYh5/FmcPbjwFP3B
+          group: test

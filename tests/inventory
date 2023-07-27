@@ -1,0 +1,2 @@
+[vm_test]
+10.10.10.20 ansible_become=true
