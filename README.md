@@ -1,5 +1,10 @@
 # [users](#users)
 
+## WARNING
+This is a modified version of user rôle of robert-de-bock.
+Please do not use this role !
+Please use : https://github.com/robertdebock/ansible-role-users/
+
 The purpose of this role is to add users and groups on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
