@@ -1,7 +1,5 @@
 ---
 
-
-
 - name: user | Manage users {{ user.name }}
   ansible.builtin.user:
     name: "{{ user.name }}"
@@ -43,7 +41,7 @@
   ansible.builtin.lineinfile:
     path: /etc/sudoers
     state: present
-    line: "#includedir /etc/sudoers.d"
+    line: "@includedir /etc/sudoers.d"
 
 - name: user | Get or set the home directory
   block:
