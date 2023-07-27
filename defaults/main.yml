@@ -5,10 +5,7 @@
 users_ssh_key_directory: ssh_keys
 
 # The default shell if not overwritten.
-users_shell: /bin/bash
-
-# manage cron permissions via /etc/cron.allow
-users_cron_allow: yes
+users_shell: /bin/zsh
 
 # should homedirectories be created?
-users_create_home: yes
+users_create_home: true

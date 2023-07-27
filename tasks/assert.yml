@@ -16,13 +16,6 @@
       - users_shell is not none
     quiet: yes
 
-- name: assert | Test if users_cron_allow is set correctly
-  ansible.builtin.assert:
-    that:
-      - users_cron_allow is defined
-      - users_cron_allow is boolean
-    quiet: yes
-
 - name: assert | Test if users_create_home is set correctly
   ansible.builtin.assert:
     that:
